@@ -8,7 +8,7 @@ if (!cached) {
 
 async function connectDB() {
   if (cached.conn) {
-    return cached.com;
+    return cached.conn;
   }
 
   if (!cached.promise) {
