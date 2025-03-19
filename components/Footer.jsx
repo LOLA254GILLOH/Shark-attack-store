@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       <p className="py-4 text-center text-xs md:text-sm">
-        Copyright 2025 © Shark Attack Entertainment All Right Reserved.
+        Copyright 2025 © Shark Attack Store All Right Reserved.
       </p>
     </footer>
   );
