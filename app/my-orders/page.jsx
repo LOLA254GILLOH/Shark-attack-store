@@ -6,22 +6,39 @@ import { useAppContext } from "@/context/AppContext";
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import Loading from "@/components/Loading";
+import axios from "axios";
+import toast from "react-hot-toast";
 
 const MyOrders = () => {
 
-    const { currency } = useAppContext();
+    const { currency, getToken, user } = useAppContext();
 
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
 
     const fetchOrders = async () => {
-        setOrders(orderDummyData)
-        setLoading(false);
+        try {
+            
+            const token = await getToken()
+
+            const {data} = await axios.get('/api/order/list', {headers:{Authorization:`Bearer ${token}`}})
+
+            if (data.success) {
+                setOrders(data.orders.reverse())
+                setLoading(false)
+            } else {
+                toast.error(data.message)
+            }
+        } catch (error) {
+            toast.error(error.message)
+        }
     }
 
     useEffect(() => {
-        fetchOrders();
-    }, []);
+        if (user) {
+            fetchOrders(); 
+        }    
+    }, [user]);
 
     return (
         <>
@@ -49,9 +66,9 @@ const MyOrders = () => {
                                     <p>
                                         <span className="font-medium">{order.address.fullName}</span>
                                         <br />
-                                        <span >{order.address.area}</span>
+                                        <span >{order.address.location}</span>
                                         <br />
-                                        <span>{`${order.address.city}, ${order.address.state}`}</span>
+                                        <span>{`${order.address.location}, ${order.address.county}`}</span>
                                         <br />
                                         <span>{order.address.phoneNumber}</span>
                                     </p>
