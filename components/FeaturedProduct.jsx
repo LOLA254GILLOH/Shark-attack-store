@@ -1,25 +1,29 @@
 import React from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/image";
+import Link from "next/link";
 
 const products = [
   {
     id: 1,
-    image: assets.girl_with_headphone_image,
-    title: "Unparalleled Sound",
-    description: "Experience crystal-clear audio with premium headphones.",
+    image: assets.newcollection,
+    title: "New Collection",
+    description: "Experience quality when you wear our merchandise.",
+    link: "/search?query=&category=New"
   },
   {
     id: 2,
-    image: assets.girl_with_earphone_image,
-    title: "Stay Connected",
-    description: "Compact and stylish earphones for every occasion.",
+    image: assets.fpimage1,
+    title: "Mens Collection",
+    description: "Compact and stylish masculine design for every occasion.",
+    link: "/search?query=&category=Mens"
   },
   {
     id: 3,
-    image: assets.boy_with_laptop_image,
-    title: "Power in Every Pixel",
-    description: "Shop the latest laptops for work, gaming, and more.",
+    image: assets.fpimage2,
+    title: "Kids Collection",
+    description: "Shop the latest designs for your kids.",
+    link: "/search?query=&category=Kids"
   },
 ];
 
@@ -32,7 +36,7 @@ const FeaturedProduct = () => {
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-14 mt-12 md:px-14 px-4">
-        {products.map(({ id, image, title, description }) => (
+        {products.map(({ id, image, title, description, link }) => (
           <div key={id} className="relative group">
             <Image
               src={image}
@@ -44,9 +48,11 @@ const FeaturedProduct = () => {
               <p className="text-sm lg:text-base leading-5 max-w-60">
                 {description}
               </p>
-              <button className="flex items-center gap-1.5 bg-orange-600 px-4 py-2 rounded">
-                Buy now <Image className="h-3 w-3" src={assets.redirect_icon} alt="Redirect Icon" />
-              </button>
+              <Link href={link}>
+                <button className="flex items-center gap-1.5 bg-orange-600 px-4 py-2 rounded">
+                  Buy now <Image className="h-3 w-3" src={assets.redirect_icon} alt="Redirect Icon" />
+                </button>
+              </Link>
             </div>
           </div>
         ))}

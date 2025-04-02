@@ -7,6 +7,7 @@ import NewsLetter from "@/components/NewsLetter";
 import FeaturedProduct from "@/components/FeaturedProduct";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SearchComponent from "@/components/Search";
 
 const Home = () => {
   return (
@@ -16,7 +17,6 @@ const Home = () => {
         <HeaderSlider />
         <HomeProducts />
         <FeaturedProduct />
-        <Banner />
         <NewsLetter />
       </div>
       <Footer />

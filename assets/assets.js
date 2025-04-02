@@ -46,6 +46,15 @@ import product_details_page_apple_earphone_image2 from "./product_details_page_a
 import product_details_page_apple_earphone_image3 from "./product_details_page_apple_earphone_image3.png";
 import product_details_page_apple_earphone_image4 from "./product_details_page_apple_earphone_image4.png";
 import product_details_page_apple_earphone_image5 from "./product_details_page_apple_earphone_image5.png";
+import tbaba1r from "./tbaba1r.png";
+import tbabanobg from "./tbaba-nobg.png";
+import shaquilr from "./shaquilr.png";
+import newcollection from "./newcollection.png";
+import fpimage1 from "./fpimage1.png";
+import fpimage2 from "./fpimage2.png";
+import a6 from "./a6.jpg";
+import banner1 from "@/public/images/banner.png";
+import conban from "./conban.jpg";
 
 export const assets = {
   logo,
@@ -96,6 +105,15 @@ export const assets = {
   product_details_page_apple_earphone_image4,
   product_details_page_apple_earphone_image5,
   checkmark,
+  tbaba1r,
+  tbabanobg,
+  shaquilr,
+  newcollection,
+  fpimage1,
+  fpimage2,
+  a6,
+  banner1,
+  conban,
 };
 
 export const BagIcon = () => {
