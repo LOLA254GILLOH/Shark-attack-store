@@ -2,7 +2,7 @@
 import React from "react";
 import { assets } from "@/assets/assets";
 import OrderSummary from "@/components/OrderSummary";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Navbar from "@/components/Navbar";
 import { useAppContext } from "@/context/AppContext";
 

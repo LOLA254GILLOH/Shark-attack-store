@@ -2,7 +2,7 @@
 import { assets } from "@/assets/assets";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useState } from "react";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";

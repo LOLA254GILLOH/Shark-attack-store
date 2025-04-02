@@ -2,7 +2,7 @@
 import { assets } from '@/assets/assets';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import React from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaClock } from "react-icons/fa";
 

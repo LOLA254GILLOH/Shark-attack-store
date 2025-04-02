@@ -3,7 +3,7 @@ import React from "react";
 import { assets, BagIcon, BoxIcon, CartIcon, HomeIcon} from "@/assets/assets";
 import Link from "next/link"
 import { useAppContext } from "@/context/AppContext";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useClerk, UserButton } from "@clerk/nextjs";
 import SearchComponent from "./Search";
 

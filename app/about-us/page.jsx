@@ -1,7 +1,7 @@
 'use client'
 import React from "react";
 import { assets } from "@/assets/assets";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 

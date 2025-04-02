@@ -1,7 +1,7 @@
 'use client'
 import React, { useState } from "react";
 import { assets } from "@/assets/assets";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import toast from "react-hot-toast";
