@@ -3,12 +3,13 @@ import { assets } from '@/assets/assets';
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import Image from "next/legacy/image";
-import React from 'react';
+import React, { Suspense } from 'react';
 import { FaMapMarkerAlt, FaEnvelope, FaPhoneAlt, FaClock } from "react-icons/fa";
 
 const Contact = () => {
   return (
     <>
+    <Suspense fallback={<p>Loading...</p>}>
         <Navbar />
         <div className="px-6 md:px-16 lg:px-32">
             {/* Banner section */}
@@ -71,6 +72,7 @@ const Contact = () => {
 
         </div>
         <Footer />
+    </Suspense>
     </>
     
   )

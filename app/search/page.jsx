@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import ProductCard from "@/components/ProductCard";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 
 const SearchResults = () => {
   const searchParams = useSearchParams();
@@ -42,6 +42,7 @@ const SearchResults = () => {
 
   return (
     <>
+    <Suspense fallback={<p>Loading...</p>}>
       <Navbar />
       <div className="max-w-5xl mx-auto p-6">
         <h1 className="text-2xl font-bold mb-4">
@@ -81,6 +82,7 @@ const SearchResults = () => {
         )}
       </div>
       <Footer />
+    </ Suspense>
     </>
   );
 };

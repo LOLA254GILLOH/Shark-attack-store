@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { assets, orderDummyData } from "@/assets/assets";
 import Image from "next/legacy/image";
 import { useAppContext } from "@/context/AppContext";
@@ -42,6 +42,7 @@ const MyOrders = () => {
 
     return (
         <>
+        <Suspense fallback={<p>Loading...</p>}>
             <Navbar />
             <div className="flex flex-col justify-between px-6 md:px-16 lg:px-32 py-6 min-h-screen">
                 <div className="space-y-5">
@@ -87,6 +88,7 @@ const MyOrders = () => {
                 </div>
             </div>
             <Footer />
+        </Suspense>
         </>
     );
 };

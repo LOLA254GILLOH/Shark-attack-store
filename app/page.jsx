@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { Suspense } from "react";
 import HeaderSlider from "@/components/HeaderSlider";
 import HomeProducts from "@/components/HomeProducts";
 import Banner from "@/components/Banner";
@@ -12,6 +12,7 @@ import SearchComponent from "@/components/Search";
 const Home = () => {
   return (
     <>
+    <Suspense fallback={<p>Loading...</p>}>
       <Navbar/>
       <div className="px-6 md:px-16 lg:px-32">
         <HeaderSlider />
@@ -20,6 +21,7 @@ const Home = () => {
         <NewsLetter />
       </div>
       <Footer />
+    </Suspense>
     </>
   );
 };

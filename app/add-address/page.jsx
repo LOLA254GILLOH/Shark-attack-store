@@ -3,7 +3,7 @@ import { assets } from "@/assets/assets";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/legacy/image";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { useAppContext } from "@/context/AppContext";
 import axios from "axios";
 import toast from "react-hot-toast";
@@ -40,6 +40,7 @@ const AddAddress = () => {
 
     return (
         <>
+        <Suspense fallback={<p>Loading...</p>}>
             <Navbar />
             <div className="px-6 md:px-16 lg:px-32 py-16 flex flex-col md:flex-row justify-between">
                 <form onSubmit={onSubmitHandler} className="w-full">
@@ -104,6 +105,7 @@ const AddAddress = () => {
                 />
             </div>
             <Footer />
+        </Suspense>
         </>
     );
 };

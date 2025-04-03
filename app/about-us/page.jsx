@@ -1,5 +1,5 @@
 'use client'
-import React from "react";
+import React, { Suspense } from "react";
 import { assets } from "@/assets/assets";
 import Image from "next/legacy/image";
 import Navbar from "@/components/Navbar";
@@ -9,6 +9,7 @@ import Footer from "@/components/Footer";
 const About = () => {
     return (
       <>  
+      <Suspense fallback={<p>Loading...</p>}>
         <Navbar />  
         <div className="px-6 md:px-16 lg:px-32">
             {/* About Header Section */}
@@ -50,6 +51,7 @@ const About = () => {
             </div>
         </div>
         <Footer/>
+      </Suspense>
       </>
     );
   };
