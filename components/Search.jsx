@@ -1,4 +1,4 @@
-"use client";
+{/* "use client";
 import { assets } from "@/assets/assets";
 import Image from "next/legacy/image";
 import Link from "next/link";
@@ -9,6 +9,7 @@ const SearchComponent = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
+  
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -75,7 +76,7 @@ const SearchComponent = () => {
 
 
                 {/* Search Bar */}
-                <div className="flex items-center gap-2">       
+                {/*<div className="flex items-center gap-2">       
                     <input
                         type="text"
                         placeholder="Search products by name..."
@@ -88,11 +89,11 @@ const SearchComponent = () => {
                     </Link>
                 </div>
                 {/* Search Button */}
-                <button type="submit" className="hidden">Search</button>
+                {/*<button type="submit" className="hidden">Search</button>
             </form>   
         </div> 
     </Suspense>
   );
 };
 
-export default SearchComponent;
+export default SearchComponent; */}
